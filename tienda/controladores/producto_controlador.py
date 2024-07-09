@@ -9,7 +9,7 @@ from modelos.producto_modelo import *
 
 class ProductoSchema(ma.Schema):
     class Meta:
-        fields=('id','nombre','precio','stock','tipoproducto','imagen')
+        fields=('id','nombre','precio','stock','descripcion','imagen')
 
 
 producto_schema=ProductoSchema()            
