@@ -1,0 +1,83 @@
+*{
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+      "width" 100;
+      
+  }
+  
+  .parrafodon{
+  margin: 20px;
+  text-align: center;
+  
+  
+  }
+  
+  body{
+    background-color: #f8efd7;
+    padding: 0;
+  
+  }
+  
+  .cards {
+    background-color: rgba(255, 255, 255, 0.699);
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    
+    border-radius: 5%;
+    justify-content: center;
+    margin: 0;
+    align-items: center;
+    padding-top: 10px;
+    position: relative;
+    top: 50%;
+    left: 25%;
+  }
+  
+  .cards:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.781);
+  }
+  
+  
+  .mp {
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    
+   
+  }
+  .payp {
+    text-align: center;
+    margin: 7px;
+    padding: 20px;
+   
+  }
+  
+  .transf{
+    text-align: center;
+    margin: 7px;
+    padding: 20px;
+  }
+  
+  .mp{
+  text-decoration: none;
+  color: black;
+  }
+  
+  .payp{
+    text-decoration: none;
+    color: black;
+  }
+  
+  .lista{
+    text-decoration: underline;
+    color: #817dce;
+  }
+  
+  .otros{
+   font-weight: bold;
+  }
