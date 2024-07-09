@@ -1,0 +1,262 @@
+.color1 {
+    color: #817dce;
+}
+
+.color2 {
+    color: #d37ab7;
+}
+
+.color3 {
+    color: #f6a9b3;
+}
+
+.color4 {
+    color: #f8e0c1;
+}
+
+.color5 {
+    background-color: #f8efd7;
+}
+
+.container {
+    background-color: #f8efd7;
+}
+
+
+.link {
+    font-size: larger;
+}
+
+.link:hover {
+    color: #d37ab7;
+}
+
+* {
+    margin-top: 0%;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+        "width" 100;
+    text-decoration: none;
+}
+
+.logo {
+    height: 80px;
+}
+
+.logo-title {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    padding-top: 3%;
+}
+
+.logo-image {
+    height: 100px;
+}
+
+.logo-image:hover {
+    transform: scale(1.20);
+}
+
+
+
+.h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-inline-start: 15%;
+    margin-inline-end: 15%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    color: #d37ab7;
+}
+
+.negrita {
+    font-weight: bold;
+    color: #d37ab7;
+}
+
+.párrafo {
+    text-align: justify;
+    font-size: larger;
+    margin-inline-start: 15%;
+    margin-inline-end: 15%;
+    padding-top: 30px;
+}
+
+
+
+.carousel-container {
+    width: 80%;
+    max-width: 800px;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-inline-start: 15%;
+    margin-inline-end: 15%;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.caption {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #f6a9b3;
+    font-size: xx-large;
+    font-weight: bold;
+    background-color: #f8efd7;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.text_ph {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #f6a9b3;
+    font-size: xx-large;
+    font-weight: bold;
+    background-color: #f8efd7;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-control.prev {
+    left: 10px;
+    border-radius: 5px;
+    background-color: #f6a9b3;
+}
+
+.carousel-control.next {
+    right: 10px;
+    border-radius: 5px;
+    background-color: #f6a9b3;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #6863c9;
+    background-color: #f8e0c1;
+    height: 20%;
+    padding: 1%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6863c9;
+    background-color: #f8e0c1;
+    height: 30%;
+    font-size: 20px;
+
+}
+
+.navbar-menu {
+    z-index: 3;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin-left: 20px;
+}
+
+.navbar-menu a {
+    padding: 8px 12px;
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.navbar-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+@media (max-width: 425px) {
+
+    .navbar {
+        justify-content: space-evenly;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        color: #6863c9;
+        background-color: #f8e0c1;
+
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-menu li {
+        border-bottom: 1px solid #6863c9;
+        ;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin: 0;
+    }
+
+    .inicio {
+        border-top: 1px solid #6863c9;
+        ;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+}

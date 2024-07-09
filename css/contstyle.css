@@ -1,0 +1,187 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8efd7;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+section {
+  flex: 1;
+  margin: 0;
+  background-color: #f8efd7;
+}
+
+h1 {
+  font-family: "Poetsen One", sans-serif;
+  font-size: 4em;
+  color: #817dce;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+/* Estilos del banner e imagen */
+.banner-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner {
+  width: 100%;
+  max-height: 400px;
+  display: block;
+  object-fit: cover;
+}
+
+.hearts {
+  position: absolute;
+  top: 10em;
+  left: 55em;
+  width: 200px;
+  height: auto;
+  transform: rotate(25deg);
+}
+
+/* Media queries para hacer el diseño responsive */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .banner {
+    max-height: 200px;
+  }
+
+  .hearts {
+    width: 50%;
+  }
+}
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.person {
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+.profile-pic {
+  width: 60%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+.description {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.description h3 {
+  color: #d37ab7;
+  margin-bottom: 5px;
+}
+
+.description p {
+  color: #333;
+}
+
+/* Estilos para las tarjetas */
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.card {
+  width: calc(50% - 10px);
+  padding: 20px;
+  background-color: #f8e0c1;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card:nth-child(2) {
+  margin-left: 20px;
+}
+
+.card h2 {
+  color: #d37ab7;
+}
+
+.card p {
+  color: #333;
+}
+
+/* Estilos para el formulario de contacto */
+.contact-card {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  background-color: #f8efd7;
+}
+
+.contact-card .card {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #f8e0c1;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card .card h2 {
+  color: #d37ab7;
+}
+
+.contact-card .card label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-card .card input[type="text"],
+.contact-card .card input[type="email"],
+.contact-card .card input[type="tel"],
+.contact-card .card textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.contact-card .card button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-card .card button:hover {
+  background-color: #0056b3;
+}

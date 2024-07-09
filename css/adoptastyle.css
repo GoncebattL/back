@@ -1,0 +1,151 @@
+* {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "width" 100;
+}
+
+body {
+    background-color: #f8efd7;
+    margin: 0;
+    padding: 0;
+}
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    position: relative;
+    background: #f1ede1;
+    border: 2px solid #817dce;
+    border-radius: 15px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+    margin: 5px;
+    width: 500px;
+    height: 300px;
+    display: flex;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.10);
+}
+
+.card-image {
+    width: 80%;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: left;
+    width: 70%;
+}
+
+.card-content img {
+    width: 9%;
+    height: 3%;
+}
+
+.card-name {
+    font-size: 2.3em;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    color: #817dce;
+    text-align: center;
+}
+
+.card-text {
+    color: #4e4e4e;
+    font-size: 1.25em;
+    line-height: 1.2em;
+}
+
+
+.patita {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    width: 20px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    z-index: 10;
+}
+
+#title {
+    color: #817dce;
+    margin-left: 10%;
+    margin-bottom: 0px;
+    margin-top: 60px;
+}
+
+#title h1 {
+    margin: 0;
+    font-family: "Poetsen One", sans-serif;
+    font-size: 3em;
+}
+
+.banner-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    max-height: 400px;
+    display: block;
+    object-fit: cover;
+}
+
+.hearts {
+    z-index: 2;
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    width: 300px;
+    height: auto;
+    transform: rotate(25deg);
+}
+
+@media screen and (max-width: 768px) {
+
+    .hearts {
+        width: 30%;
+    }
+
+    #title h1 {
+        font-size: 40px;
+    }
+
+    #cards {
+        padding: 20px;
+    }
+
+    .card {
+        margin: 0px;
+        height: 320px;
+    }
+
+    .card-content {
+        padding: 5px;
+        text-align: left;
+        width: 50%;
+    }
+}
