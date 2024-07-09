@@ -25,5 +25,8 @@ from controladores.usuario_controlador import *
 
 
 # programa principal *******************************
+@app.route('/')
+def bienvenida():
+    return render_template('index.html')
 if __name__=='__main__':  
     app.run(debug=True, port=5000)    # ejecuta el servidor Flask en el puerto 5000
