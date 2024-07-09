@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenidos a Huellitas ♥</title>
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/all.min.css" rel="stylesheet">
+    <link href="../../css/mis-estilos.css" rel="stylesheet">
+    <!-- Fonts de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Protest+Revolution&family=Protest+Riot&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <!-- {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %} -->
+
+        <div class="card border-primary mb-3 mx-auto" style="max-width: 30rem;">
+            <div class="card-header protest-riot-regular text-center">
+                <h5>ACCEDE A TU USUARIO ♥</h5>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title text-center">Ingresa tus datos</h5>
+                <form class="row g-3" action="{{ url_for('login') }}" method="post">
+                    <div class="col-12">
+                        <label for="usuario" class="form-label">Usuario:</label>
+                        <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario" required>
+                    </div>
+                    <div class="col-12">
+                        <label for="clave" class="form-label">Contraseña:</label>
+                        <input type="password" class="form-control" id="clave" name="clave" placeholder="Contraseña" required>
+                    </div>
+                    <i><b>Nota:</b> No compartas tu usuario y contraseña con nadie.</i>
+                    <br>
+                    <div class="col-12 mt-4 text-center">
+                        <button type="submit" class="btn btn-primary" onclick="window.location.href='tienda.html'"> <i class="fa-solid fa-user"></i> Ingresar</button>
+                        <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html'"><i class="fa-solid fa-rotate-left"></i> Volver</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="/js/header_footer.js"></script>
+    <script src="/js/usuario.js" ></script>
+</body>
+
+</html>

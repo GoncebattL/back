@@ -1,12 +1,14 @@
 from flask import  jsonify,request  
 from app import app, db,ma
-from modelos.usuario_modelo import *
+#from modelos.usuario_modelo import *
+from usuarios_modelo import Usuario
 
 class UsuarioSchema(ma.Schema):
     class Meta:
-        fields=('id','usuario','clave','rol')
+        fields=('id','nombre','apellido','correo','usuario','clave','rol')
 usuario_schema=UsuarioSchema()            
 usuarios_schema=UsuarioSchema(many=True)  
+
 
 # rutas (json)
 @app.route('/usuarios',methods=['GET'])
@@ -31,10 +33,13 @@ def delete_usuario(id):
 @app.route('/usuarios', methods=['POST']) 
 def create_usuario():
     #print(request.json)  # request.json contiene el json que envio el cliente
+    nombre=request.json['nombre']
+    apellido=request.json['apellido']
+    correo=request.json['correo']
     usuario=request.json['usuario']
     clave=request.json['clave']
     rol=request.json['rol']
-    new_usuario=Usuario(usuario,clave,rol)
+    new_usuario=Usuario(nombre,apellido,usuario,correo,clave,rol)
     db.session.add(new_usuario)
     db.session.commit()
     return usuario_schema.jsonify(new_usuario)
@@ -45,6 +50,8 @@ def update_usuario(id):
     usuario=Usuario.query.get(id)
     usuario.usuario=request.json['usuario']
     usuario.clave=request.json['clave']
-    usuario.rol=request.json['rol']
     db.session.commit()
     return usuario_schema.jsonify(usuario)
+
+
+#------------------

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/perro.png" type="image/x-icon">
+    <title>Huellitas en casa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/tienda.css">
+</head>
+
+<body>
+
+    <body class="contenedor">
+        <header>
+
+        </header>
+        <main>
+            <div>
+                <h1 id="title">
+                    Nuestros productos
+                </h1>
+            </div>
+            <div id="app">
+
+                <div id="cards">
+                    <div v-for="producto in productos" :key="producto.id" class="card">
+
+                        <div class="card-image">
+                            <img class="imgb" :src="producto.imagen" :alt="producto.nombre">
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="card-name"> {{producto.nombre}}</h2>
+                            <h3 class="card-text"> {{producto.descripcion}}</h3>
+                        </div>
+
+                        <div class="card-footer">
+                            <h3 class="card-price"> Precio: {{producto.precio}}</h3>
+                            <button v-if="producto.stock >0" v-on:click="comprar(producto.id)"
+                                id="comprar">Comprar</button>
+                            <button v-else id="comprar">SIN STOCK</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="floating-cart">
+                <div class="cart-icon">
+                    🛒
+                </div>
+                <div class="cart-content">
+                    <h3>Carrito</h3>
+                    <ul class="cart-items">
+                        <li>{{producto.nombre}}</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+        <script src="/js/header_footer.js"></script>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
+        <script src="/js/productos.js"></script>
+    </body>
+
+</html>
