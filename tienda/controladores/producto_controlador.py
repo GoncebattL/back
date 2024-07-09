@@ -47,7 +47,8 @@ def create_producto():
     stock=request.json['stock']
     descripcion=request.json['descripcion']
     imagen=request.json['imagen']
-    new_producto=Producto(nombre,precio,stock,descripcion,imagen)
+    new_producto=Producto(nombre=nombre,precio=precio,stock=stock,descripcion=descripcion,imagen=imagen)
+    
     db.session.add(new_producto)
     db.session.commit()
     return producto_schema.jsonify(new_producto)
