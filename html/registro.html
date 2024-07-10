@@ -15,57 +15,47 @@
 </head>
 
 <body>
-    <div class="container mt-5">
-        <!-- {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-                {% for category, message in messages %}
-                    <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
-                        {{ message }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                {% endfor %}
-            {% endif %}
-        {% endwith %} -->
-
+    <div class="container mt-5" id="app">
         <div class="card border-primary mb-3 mx-auto" style="max-width: 30rem;">
             <div class="card-header protest-riot-regular text-center">
                 <h5>CREA TU USUARIO ♥</h5>
             </div>
             <div class="card-body">
                 <h5 class="card-title text-center">Ingresa tus datos</h5>
-                <form class="row g-3" action="{{ url_for('registro') }}" method="post">
+                <form class="row g-3" @submit.prevent="grabar">
                     <div class="col-12">
                         <label for="nombre" class="form-label">Nombre:</label>
-                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresa tu Nombre" required>
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresa tu Nombre" required v-model="nombre">
                     </div>
                     <div class="col-12">
                         <label for="apellido" class="form-label">Apellido:</label>
-                        <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingresa tu Apellido" required>
+                        <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingresa tu Apellido" required v-model="apellido">
                     </div>
                     <div class="col-12">
                         <label for="correo" class="form-label">Correo electrónico:</label>
-                        <input type="email" class="form-control" id="correo" name="correo" placeholder="Ingresa tu correo" required>
+                        <input type="email" class="form-control" id="correo" name="correo" placeholder="Ingresa tu correo" required v-model="correo">
                     </div>
                     <div class="col-12">
                         <label for="usuario" class="form-label">Usuario:</label>
-                        <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario" required>
+                        <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario" required v-model="usuario">
                     </div>
                     <div class="col-12">
                         <label for="contrasena" class="form-label">Contraseña:</label>
-                        <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Contraseña" required>
+                        <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Contraseña" required v-model="clave">
                     </div>
                     <i><b>Nota:</b> Todos los campos son obligatorios</i>
                     <br>
                     <div class="col-12 mt-4 text-center">
-                        <button type="submit" class="btn btn-primary" v-on:click="grabar()"><i class="fa-solid fa-user-plus"></i>  Crear usuario</button>
+                        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-user-plus"></i> Crear usuario</button>
                         <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html'"><i class="fa-solid fa-rotate-left"></i> Volver al inicio</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+    <script src="../../js/vue.global.js"></script>
     <script src="../../js/bootstrap.bundle.min.js"></script>
-    <script src="/js/usuarios.js"></script>
+    <script src="/js/usuario.js"></script>
     <script src="/js/header_footer.js"></script>
 </body>
 

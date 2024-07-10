@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch('header.html')
+    fetch('/html/header.html')
         .then(response => response.text())
         .then(data => {
             const header = document.createElement('div');
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.insertAdjacentElement('afterbegin', header);
         })
 
-    fetch('footer.html')
+    fetch('/html/footer.html')
         .then(response => response.text())
         .then(data => {
             const footer = document.createElement('div');

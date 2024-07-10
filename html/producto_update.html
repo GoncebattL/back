@@ -14,7 +14,7 @@
       </header>
       <main>
         <div class="container" id="app">
-          <form style="background-color: aliceblue;margin:10px auto ; width: 400px; padding: 20px;">
+          <form style="background-color: #f8efd7;margin:10px auto ; width: 400px; padding: 20px;">
           <h2>Editar Producto </h2>
                <div class="mb-3">
             <label for="id">Id</label>
@@ -42,7 +42,7 @@
             <input type="text" name="descripcion" id="descripcion" v-model="descripcion">
           </div>
 
-          <button type="button" class="btn btn-success" v-on:click="modificar()">Grabar</button>
+          <button type="button" class="btn btn-success" style="color: white; background-color: #d37ab7;" v-on:click="modificar()">Grabar</button>
           </form>
         </div>
       </main>
@@ -57,6 +57,7 @@
       <script src="/js/main.js"></script>
       <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
       <script src="/js/producto_editar.js"></script>
+      
     </body>
     </html>
     
