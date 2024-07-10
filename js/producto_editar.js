@@ -11,7 +11,7 @@ const { createApp } = Vue
         stock:0,
         precio:0,
         descripcion:"",
-        url:'http://huellitas.pythonanywhere.com/productos/'+id,
+        url:'https://huellitas.pythonanywhere.com/productos/'+id,
        }  
     },
     methods: {
