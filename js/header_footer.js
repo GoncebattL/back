@@ -6,6 +6,18 @@ document.addEventListener("DOMContentLoaded", function () {
             header.className = "header";
             header.innerHTML = data;
             document.body.insertAdjacentElement('afterbegin', header);
+
+            if (sessionStorage.getItem("adm") != "1") {
+                document.querySelector("#crud").setAttribute('style', 'display:none')
+            } else {
+                document.querySelector("#crud").setAttribute('style', 'display:contents')
+            }
+        
+            document.getElementById('logout').addEventListener('click', () => {
+                sessionStorage.removeItem("adm");
+                document.querySelector("#logout").setAttribute('style', 'display:none')
+                window.location.href = "/index.html";
+            })
         })
 
     fetch('/html/footer.html')
@@ -16,11 +28,5 @@ document.addEventListener("DOMContentLoaded", function () {
             footer.innerHTML = data;
             document.body.insertAdjacentElement('beforeend', footer);
         })
-
-    if (sessionStorage.getItem("adm") != "1") {
-        document.querySelector("#crud").setAttribute('style', 'display:none')
-    } else {
-        document.querySelector("#crud").setAttribute('style', 'display:on')
-    }
 });
 

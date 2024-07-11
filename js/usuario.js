@@ -74,10 +74,14 @@ createApp({
                 if (this.usuarios[i].clave === this.clave) {
                     if (this.usuarios[i].rol === 1) {
                         sessionStorage.setItem("adm", 1);
-                    } else {
+                        window.location.href = "/html/productos.html";
+                        document.querySelector("#logout").setAttribute('style', 'display:contents')
+                    } 
+                    else {
                         sessionStorage.setItem("adm", 0);
-                    }
-                    window.location.href = "/html/tienda.html";
+                        document.querySelector("#logout").setAttribute('style', 'display:contents')
+                    window.location.href = "/index.html";
+                }
                 } else {
                     alert('Clave incorrecta');
                 }
