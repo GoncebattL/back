@@ -54,7 +54,7 @@ createApp({
             fetch(this.url, options)
                 .then(() => {
                     alert("Registro grabado");
-                    window.location.href = "./index.html";
+                    window.location.href = "/index.html";
                 })
                 .catch(err => {
                     console.error(err);
@@ -77,7 +77,7 @@ createApp({
                     } else {
                         sessionStorage.setItem("adm", 0);
                     }
-                    window.location.href = "./tienda.html";
+                    window.location.href = "/html/tienda.html";
                 } else {
                     alert('Clave incorrecta');
                 }

@@ -22,7 +22,7 @@
             </div>
             <div class="card-body">
                 <h5 class="card-title text-center">Ingresa tus datos</h5>
-                <form class="row g-3" @submit.prevent="grabar">
+                <form class="row g-3">
                     <div class="col-12">
                         <label for="nombre" class="form-label">Nombre:</label>
                         <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresa tu Nombre" required v-model="nombre">
@@ -46,14 +46,15 @@
                     <i><b>Nota:</b> Todos los campos son obligatorios</i>
                     <br>
                     <div class="col-12 mt-4 text-center">
-                        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-user-plus"></i> Crear usuario</button>
+                        <button type="submit" class="btn btn-primary" v-on:click="grabar()"><i class="fa-solid fa-user-plus"></i> Crear usuario</button>
                         <button type="button" class="btn btn-secondary" onclick="window.location.href='/index.html'"><i class="fa-solid fa-rotate-left"></i> Volver al inicio</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-    <script src="../../js/vue.global.js"></script>
+    <!--<script src="../../js/vue.global.js"></script> -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="../../js/bootstrap.bundle.min.js"></script>
     <script src="/js/usuario.js"></script>
     <script src="/js/header_footer.js"></script>

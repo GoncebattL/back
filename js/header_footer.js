@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.text())
         .then(data => {
             const header = document.createElement('div');
-            header.className="header";
+            header.className = "header";
             header.innerHTML = data;
             document.body.insertAdjacentElement('afterbegin', header);
         })
@@ -12,8 +12,15 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.text())
         .then(data => {
             const footer = document.createElement('div');
-            footer.className="footer";
+            footer.className = "footer";
             footer.innerHTML = data;
             document.body.insertAdjacentElement('beforeend', footer);
         })
+
+    if (sessionStorage.getItem("adm") != "1") {
+        document.querySelector("#crud").setAttribute('style', 'display:none')
+    } else {
+        document.querySelector("#crud").setAttribute('style', 'display:on')
+    }
 });
+
