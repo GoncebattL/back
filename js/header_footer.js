@@ -8,14 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.insertAdjacentElement('afterbegin', header);
 
             if (sessionStorage.getItem("adm") != "1") {
-                document.querySelector("#crud").setAttribute('style', 'display:none')
+                document.querySelector("#crud").setAttribute('style', 'display:none');
             } else {
-                document.querySelector("#crud").setAttribute('style', 'display:contents')
+                document.querySelector("#crud").setAttribute('style', 'display:contents');
             }
         
             document.getElementById('logout').addEventListener('click', () => {
                 sessionStorage.removeItem("adm");
-                document.querySelector("#logout").setAttribute('style', 'display:none')
+                document.querySelector("#logout").setAttribute('style', 'display:none');
                 window.location.href = "/index.html";
             })
         })
