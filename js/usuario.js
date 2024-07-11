@@ -25,6 +25,27 @@ createApp({
                     this.error = true;
                 });
         },
+        grabar() {
+            let usuario = {
+                lave: this.clave,
+                rol: 0,
+            };
+            var options = {
+                body: JSON.stringify(usuario),
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                redirect: "follow",
+            };
+            fetch(this.url, options)
+                .then(function () {
+                    alert("Registro grabado");
+                    window.location.href = "/index.html";
+                })
+                .catch((err) => {
+                    console.error(err);
+                    alert("Error al Grabarr");
+                });
+        },
         login() {
             console.log("Intentando iniciar sesión...");
             console.log("Usuario:", this.usuario);

@@ -18,6 +18,27 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.querySelector("#logout").setAttribute('style', 'display:none');
                 window.location.href = "/index.html";
             })
+
+            
+            if (sessionStorage.getItem("adm") == "1") {
+                document.querySelector("#crud").setAttribute('style', 'display:contents');
+                document.querySelector("#reg").setAttribute('style', 'display:none');
+                document.querySelector("#login").setAttribute('style', 'display:none');
+            } else if (sessionStorage.getItem("adm") == "0"){
+                document.querySelector("#crud").setAttribute('style', 'display:none');
+                document.querySelector("#reg").setAttribute('style', 'display:none');
+                document.querySelector("#login").setAttribute('style', 'display:none');
+            } else {
+                document.querySelector("#crud").setAttribute('style', 'display:none');
+                document.querySelector("#reg").setAttribute('style', 'display:contents');
+                document.querySelector("#login").setAttribute('style', 'display:contents');
+            }
+        
+            document.getElementById('logout').addEventListener('click', () => {
+                sessionStorage.removeItem("adm");
+                document.querySelector("#logout").setAttribute('style', 'display:none');
+                window.location.href = "/index.html";
+            })
         })
 
     fetch('/html/footer.html')
