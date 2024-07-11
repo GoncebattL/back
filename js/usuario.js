@@ -27,8 +27,12 @@ createApp({
         },
         grabar() {
             let usuario = {
-                lave: this.clave,
+                usuario: this.usuario,
+                clave: this.clave,
                 rol: 0,
+                nombre: this.nombre,
+                apellido: this.apellido,
+                correo: this.correo
             };
             var options = {
                 body: JSON.stringify(usuario),
@@ -39,7 +43,7 @@ createApp({
             fetch(this.url, options)
                 .then(function () {
                     alert("Registro grabado");
-                    window.location.href = "/index.html";
+                    window.location.href = "index.html";
                 })
                 .catch((err) => {
                     console.error(err);
