@@ -39,9 +39,7 @@
 
                         <div class="card-footer">
                             <h3 class="card-price"> Precio: {{producto.precio}}</h3>
-                            <button v-if="producto.stock >0" v-on:click="comprar(producto.id)"
-                                id="comprar">Comprar</button>
-                            <button v-else id="comprar">SIN STOCK</button>
+                            <button v-on:click="comprar()" id="comprar">Comprar</button>
                         </div>
 
                     </div>
@@ -49,17 +47,6 @@
                 </div>
             </div>
 
-            <div class="floating-cart">
-                <div class="cart-icon">
-                    🛒
-                </div>
-                <div class="cart-content">
-                    <h3>Carrito</h3>
-                    <ul class="cart-items">
-                        <li>{{producto.nombre}}</li>
-                    </ul>
-                </div>
-            </div>
         </main>
         <footer>
 

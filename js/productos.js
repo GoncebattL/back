@@ -62,12 +62,15 @@ const { createApp } = Vue
             fetch(this.url, options)
                 .then(function () {
                     alert("Registro grabado")
-                    window.location.href = "./productos.html";  // recarga productos.html
+                    window.location.href = "/productos.html";  // recarga productos.html
                 })
                 .catch(err => {
                     console.error(err);
                     alert("Error al Grabar")  // puedo mostrar el error tambien
                 })      
+        },
+        comprar(){
+            alert('Producto comprado');
         }
     },
     created() {
